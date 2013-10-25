@@ -29,5 +29,10 @@ class Racional
 		"#@num/#@den"
 	end
 
+	def to_f()#Devuelve el resultado de la división en flotante
+		num =  @num.to_f
+		num / @den	
+	end
+
 end
 

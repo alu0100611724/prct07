@@ -35,4 +35,9 @@ describe Racional do
     @racional.to_s.should == "1/2"
   end
 
+	it "Se debe mostar por la consola la fraccion en formato flotante" do
+		@racional.respond_to?("to_f").should == true
+    @racional.to_f.should == 1.to_f/2
+  end	
+
 end
