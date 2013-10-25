@@ -9,7 +9,7 @@ end
 
 desc "build HTML"
 task :html do
-  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --html documentation"
+  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --format html"
 end
 
 desc "install gems"
