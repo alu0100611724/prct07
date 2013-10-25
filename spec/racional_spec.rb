@@ -96,5 +96,11 @@ describe Racional do
   it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
     (@racional >= Racional.new(6,5)).should == false
   end
+  
+  it "Multiplicacion y valor absoluto" do 
+    temp = @racional * Racional.new(-1,1)
+    temp.abs
+    temp.should == @racional
+  end
 
 end

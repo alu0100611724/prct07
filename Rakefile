@@ -7,9 +7,9 @@ task :spec do
   sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --format documentation"
 end
 
-desc "build HTML from README.md"
+desc "build HTML"
 task :html do
-  sh "kramdown README.md  > README.html"
+  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --html documentation"
 end
 
 desc "install gems"
