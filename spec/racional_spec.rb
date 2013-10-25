@@ -61,4 +61,9 @@ describe Racional do
     (-@racional).should == Racional.new(-1,2)
   end
 
+   it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+    (@racional + Racional.new(1,2)).should == Racional.new(1,1)
+  end
+
+
 end

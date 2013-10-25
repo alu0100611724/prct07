@@ -10,11 +10,9 @@ class Racional
     raise ArgumentError, 'El denominador no puede ser cero' unless den != 0
     raise ArgumentError, 'El denominador no es numerico' unless den.is_a? Numeric
     raise ArgumentError, 'El numerador no es numerico' unless num.is_a? Numeric
-		
-		mcd = gcd(num, den)
-		@num = num/mcd
-		@den = den/mcd
-              
+     	        mcd = gcd(num, den)
+                @num = num/mcd
+                @den = den/mcd
   end
 	
 	def num()#Devuelve el numerador @num
@@ -59,6 +57,11 @@ class Racional
 		Racional.new(@num*-1, @den)
 	end
 
+	def +(other)
+          n = (@num * other.denom) + (other.num * @den)
+          d = (@den * other.denom)
+          Racional.new(n, d)
+    	end
 
 end
 
