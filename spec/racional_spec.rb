@@ -1,18 +1,22 @@
 require "rspec"
-require "../lib/racional.rb"
+require "./lib/racional.rb"
 
 describe Racional do
 
   before :each do
-    @racional = Racional.new(1,2)
+    @racional = Racional.new(4,8)#Equivale a 1/2
   end
 
   it "Debe existir un numerador" do
-    @racional.num_.should == 1
+    @racional.num.should == 1
   end
 
   it "Debe existir un denominador" do
-    @racional.den_.should == 2
+    @racional.den.should == 2
+  end
+
+	it "Debe de estar en su forma reducida" do
+    @racional.num.should == 1 and @racional.den.should == 2
   end
 
 end
