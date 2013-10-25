@@ -2,8 +2,8 @@ require "./lib/gcd.rb"
 
 class Racional
 
-  attr_accessor :num #numerador
-	attr_accessor :den #denominador
+  attr_writer :num #numerador
+	attr_writer :den #denominador
 
   def initialize(num, den)
     #Comprobacion de datos introducidos
@@ -16,6 +16,49 @@ class Racional
 		@den = den/mcd
               
   end
+	
+	def num()#Devuelve el numerador @num
+		@num
+	end
+	
+	def denom()#Devuelve el denominador @den
+		@den
+	end
+
+	def to_s()#Devuelve una cadena de la forma "1/2"
+		"#@num/#@den"
+	end
+
+	def to_f()#Devuelve el resultado de la división en flotante
+		num =  @num.to_f
+		num / @den	
+	end
+	
+	def abs()#Cambia la fracción por su valor absoluto
+		if @num < 0
+			@num = @num*-1
+		end
+		if @den < 0
+			@den = @den*-1
+		end
+	end
+
+	def reciprocal()#Cambia la fracción por su recíproca
+		Racional.new(@den, @num)
+	end
+
+	def ==(ob)#Sobrecarga del operador == para que compare el objeto que invoca con el parametrico
+		if @num == ob.num and @den ==  ob.denom and ob.instance_of? Racional
+			true
+		else
+		false
+		end
+	end
+	
+	def -@#sobrecarga del operador - para calcular la inversa
+		Racional.new(@num*-1, @den)
+	end
+
 
 end
 
