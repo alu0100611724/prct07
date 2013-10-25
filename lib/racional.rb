@@ -56,7 +56,7 @@ class Racional
 	end
 	
 	def -@#sobrecarga del operador - para calcular la inversa
-		Racional.new(@den*-1, @num)
+		Racional.new(@num*-1, @den)
 	end
 
 

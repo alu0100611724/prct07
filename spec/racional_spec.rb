@@ -58,7 +58,7 @@ describe Racional do
   end	
 
 	it "Se debe calcular el opuesto de una fraccion con -" do
-    (-@racional).should == Racional.new(-2,1)
+    (-@racional).should == Racional.new(-1,2)
   end
 
 end
