@@ -4,7 +4,7 @@ task :default => :spec
 
 desc "run rspec tests"
 task :spec do
-  sh "rspec -Ilib -Ispec spec/racional_spec.rb"
+  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb"
 end
 
 desc "build HTML from README.md"
