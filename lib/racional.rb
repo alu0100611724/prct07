@@ -58,10 +58,15 @@ class Racional
 	end
 
 	def +(other)
-          n = (@num * other.denom) + (other.num * @den)
-          d = (@den * other.denom)
-          Racional.new(n, d)
+          num = (@num * other.denom) + (other.num * @den)
+          den = (@den * other.denom)
+          Racional.new(num, den)
     	end
 
+	def -(other)
+          num = (@num * other.denom) - (other.num * @den)
+          den = (@den * other.denom)
+          Racional.new(num, den)
+        end
 end
 
