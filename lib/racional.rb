@@ -2,8 +2,8 @@ require "./lib/gcd.rb"
 
 class Racional
 
-  attr_accessor :num #numerador
-	attr_accessor :den #denominador
+  attr_writer :num #numerador
+	attr_writer :den #denominador
 
   def initialize(num, den)
     #Comprobacion de datos introducidos
@@ -16,6 +16,14 @@ class Racional
 		@den = den/mcd
               
   end
+	
+	def num()#Devuelve el numerador @num
+		@num
+	end
+	
+	def denom()#Devuelve el denominador @den
+		@den
+	end
 
 end
 
