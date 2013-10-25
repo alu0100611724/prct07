@@ -33,6 +33,15 @@ class Racional
 		num =  @num.to_f
 		num / @den	
 	end
+	
+	def abs()#Cambia la fracción por su valor absoluto
+		if @num < 0
+			@num = @num*-1
+		end
+		if @den < 0
+			@den = @den*-1
+		end
+	end
 
 end
 

@@ -38,6 +38,13 @@ describe Racional do
 	it "Se debe mostar por la consola la fraccion en formato flotante" do
 		@racional.respond_to?("to_f").should == true
     @racional.to_f.should == 1.to_f/2
+  end
+
+	it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+		@racional.respond_to?("abs").should == true
+		absoluto = Racional.new(-1,2)
+		absoluto.abs
+    absoluto.num.should == @racional.num and absoluto.denom.should == @racional.denom
   end	
 
 end
