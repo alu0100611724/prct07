@@ -77,4 +77,8 @@ describe Racional do
     (@racional / Racional.new(6,5)).should == Racional.new(5,12)
   end
 
+  it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+    (@racional % Racional.new(6,5)).should == Racional.new(1,1)
+  end
+
 end

@@ -81,5 +81,11 @@ class Racional
           Racional.new(num, den)
         end
 
+	def %(other)
+	  num = (@num % @den)
+	  den = (other.num % other.denom)
+	  Racional.new(num, den)
+	end
+
 end
 
