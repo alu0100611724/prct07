@@ -30,4 +30,9 @@ describe Racional do
 
   end
 
+	it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
+		@racional.respond_to?("to_s").should == true
+    @racional.to_s.should == "1/2"
+  end
+
 end

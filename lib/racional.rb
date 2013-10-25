@@ -25,5 +25,9 @@ class Racional
 		@den
 	end
 
+	def to_s()#Devuelve una cadena de la forma "1/2"
+		"#@num/#@den"
+	end
+
 end
 
