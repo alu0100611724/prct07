@@ -43,5 +43,9 @@ class Racional
 		end
 	end
 
+	def reciprocal()#Cambia la fracción por su recíproca
+		Racional.new(@den, @num)
+	end
+
 end
 

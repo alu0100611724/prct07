@@ -45,6 +45,11 @@ describe Racional do
 		absoluto = Racional.new(-1,2)
 		absoluto.abs
     absoluto.num.should == @racional.num and absoluto.denom.should == @racional.denom
+  end
+	
+	it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+		@racional.respond_to?("reciprocal").should == true
+		@racional.reciprocal.num.should == @racional.denom  and @racional.reciprocal.denom.should == @racional.num
   end	
 
 end
