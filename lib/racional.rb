@@ -3,7 +3,9 @@ require "./lib/gcd.rb"
 class Racional
 
   attr_writer :num #numerador
-	attr_writer :den #denominador
+  attr_writer :den #denominador
+
+  include Comparable
 
   def initialize(num, den)
     #Comprobacion de datos introducidos
@@ -86,6 +88,15 @@ class Racional
 	  den = (other.num % other.denom)
 	  Racional.new(num, den)
 	end
-
+	
+	def eql?(o)
+          return @num.eql?(o.num) && @den.eql?(o.denom) if o.instance_of? Racional
+          false
+        end
+	
+	def <=>(o)
+          return nil unless o.instance_of? Racional
+          @den*@den+@num*@num <=> o.denom*o.denom+o.num*o.num
+        end
 end
 
