@@ -47,5 +47,14 @@ class Racional
 		Racional.new(@den, @num)
 	end
 
+	def ==(ob)#Sobrecarga del operador == para que compare el objeto que invoca con el parametrico
+		if @num == ob.num and @den ==  ob.denom and ob.instance_of? Racional
+			true
+		else
+		false
+		end
+	end
+
+
 end
 

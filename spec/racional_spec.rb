@@ -50,6 +50,11 @@ describe Racional do
 	it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
 		@racional.respond_to?("reciprocal").should == true
 		@racional.reciprocal.num.should == @racional.denom  and @racional.reciprocal.denom.should == @racional.num
+  end
+
+	it "Se debe comparar si dos fracciones son iguales con ==" do
+		@racional.respond_to?("==").should == true
+    @racional.should == Racional.new(10, 20)
   end	
 
 end
