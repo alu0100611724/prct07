@@ -69,5 +69,8 @@ describe Racional do
     (@racional - Racional.new(3,2)).should == Racional.new(-1,1)
   end
 
+  it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
+    (@racional * Racional.new(6,5)).should == Racional.new(3,5)
+  end
 
 end
