@@ -1,4 +1,9 @@
+$:.unshift File.dirname('racional_spec.rb') + './lib/*'
+
 require 'rake'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new
 
 task :default => :spec
 
@@ -12,8 +17,4 @@ task :html do
   sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --format html"
 end
 
-desc "install gems"
-task :install do
-  sh "bundle install"
-end
 
