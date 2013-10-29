@@ -14,7 +14,7 @@ end
 
 desc "build HTML"
 task :html do
-  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --format html"
+  sh "rspec -Ilib ./lib/* -Ispec spec/racional_spec.rb --format html > pruebas.html"
 end
 
 
